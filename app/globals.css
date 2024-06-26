@@ -30,4 +30,8 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  .layout-width {
+    @apply md:max-w-3xl lg:max-w-[40rem] xl:max-w-[48rem];
+  }
 }
