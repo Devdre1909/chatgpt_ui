@@ -14,25 +14,47 @@ const MessageAi = () => {
             </div>
           </div>
           <div>
-            <div className="text-base text-white">
-              Good Morning, <br /> <br />
-              Thank you for reaching out to us. <br /> <br />
-              To assist you more efficiently, could you please provide a more
-              detailed description of the issue you're encountering? We see that
-              you are currently enrolled in the "Data Analysis with Excel"
-              course and have just completed the "Creating Dynamic Charts"
-              module. <br /> <br />
-              To help us understand and resolve your issue quickly, please
-              answer the following questions: <br /> <br />
-              Is the XXX app opening successfully? <br /> <br />
-              Are you able to sign in and access your course? <br /> <br />
-              If you can sign in, what happens when you try to click on your
-              next class? <br /> <br />
-              We appreciate your cooperation and look forward to your response.{" "}
-              <br />
-              <br />
-              Thank you.
-            </div>
+            <div
+              className="text-base text-white AIMESSAGE"
+              dangerouslySetInnerHTML={{
+                __html: `
+
+
+                <p>
+                  Hello, here is your response
+                </p>
+
+
+                <table>
+  <tr>
+    <th>is_error</th>
+    <th>is_critical</th>
+    <th>original_log</th>
+    <th>error</th>
+    <th>possible_fix</th>
+    <th>affected_services</th>
+  </tr>
+  <tr style="color:red;">
+    <td>is_error</td>
+    <td>is_critical</td>
+    <td>{
+        "insertId": "f566s3kye8y1iu2e",
+        "jsonPayload": {
+            "message": "POST /api/service-accounts-actions/external-sourcing/signup {\"statusCode\":400,\"timestamp\":\"2024-06-11T21:00:33.248Z\",\"path\":\"/api/service-accounts-actions/external-sourcing/signup\",\"method\":\"POST\",\"message\":{\"statusCode\":400,\"message\":\"Invalid token\",\"error\":\"Bad Request\"}}",
+            "span_id": "b5725d02edb2c99c",
+            "trace_id": "a8f997f53d0bfa39d3ef128c574be373",
+            "trace_flags": "01",
+            "level": "error"
+        }
+    }</td>
+    <td>Invalid token</td>
+    <td>Check token generation and validation process</td>
+    <td>xyz</td>
+  </tr>
+</table>
+              `,
+              }}
+            ></div>
           </div>
         </div>
       </div>

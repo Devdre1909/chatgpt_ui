@@ -26,6 +26,43 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+@layer base {
+  .AIMESSAGE table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .AIMESSAGE th,
+  .AIMESSAGE td {
+    border: 1px solid rgb(var(--foreground-rgb));
+    padding: 0.5rem;
+    /* @apply text-left rounded-md; */
+  }
+
+  .AIMESSAGE th {
+    background: rgb(var(--foreground-rgb));
+    color: rgb(var(--background-start-rgb));
+  }
+
+  .AIMESSAGE td {
+    @apply text-sm p-1 bg-transparent text-white;
+  }
+
+  .AIMESSAGE p {
+    margin: 1rem 0;
+  }
+
+  .AIMESSAGE img {
+    max-width: 100%;
+  }
+
+  .AIMESSAGE blockquote {
+    border-left: 0.25rem solid rgb(var(--foreground-rgb));
+    margin: 1rem 0;
+    padding: 0 1rem;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
